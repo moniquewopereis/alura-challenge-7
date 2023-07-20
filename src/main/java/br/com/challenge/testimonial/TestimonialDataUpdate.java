@@ -9,7 +9,9 @@ public record TestimonialDataUpdate(
 		
 		String photo,
 		
-		String testimonial
+		String testimonial,
+		
+		boolean active
 		
 		) {
 

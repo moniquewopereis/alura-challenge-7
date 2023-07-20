@@ -23,20 +23,30 @@ public class Testimonial {
 	private String name;
 	private String testimonial;
 	private String photo;
+	private boolean active;
 	
 	public Testimonial(TestimonialData data) {
         this.testimonial = data.testimonial();
         this.name = data.name();
         this.photo = data.photo();
+        this.active = true;
 	}
 
 	public void update(TestimonialDataUpdate data) {
 		if (data.testimonial() != null) {
             this.testimonial = data.testimonial();
+		}
         if (data.photo() != null) {
             this.photo = data.photo();
-      }
+        }
+        if (data.active() != false) {
+        	this.active = true;
+        }
 	}
-  }
+
+	public void delete() {
+		this.active = false;
+	}
 }
+
 	
